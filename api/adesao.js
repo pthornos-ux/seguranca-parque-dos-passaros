@@ -41,7 +41,7 @@ module.exports = async (req,res)=>{
       'Status pagamento':'Aguardando pagamento',
       'Valor':500,
       'Submission ID':String(submissionId),
-      'Versão do Termo':'v1.5 — SEM SAPP'
+      'Versão do Termo':'v1.5'
     };
     const wr=await fetch(API,{method:'POST',headers:headers(),body:JSON.stringify({records:[{fields}],typecast:true})});
     if(!wr.ok){console.error('Airtable write failed',wr.status,await wr.text()); throw new Error('airtable-write');}
