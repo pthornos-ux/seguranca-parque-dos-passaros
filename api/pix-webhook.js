@@ -13,7 +13,7 @@ const airtableHeaders = () => ({
   'Content-Type': 'application/json'
 });
 
-const esc = (value) => String(value || '').replace(/'/g, "\\'");
+const esc = (value) => String(value || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 
 const getRawBody = (req) => {
   if (typeof req.rawBody === 'string') return req.rawBody;
