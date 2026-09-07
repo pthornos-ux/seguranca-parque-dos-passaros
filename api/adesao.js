@@ -9,7 +9,7 @@ const headers = () => ({
 });
 
 const digits = (value) => (value || '').replace(/\D/g, '');
-const esc = (value) => String(value || '').replace(/'/g, "\\'");
+const esc = (value) => String(value || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ ok: false, erro: 'Método não permitido' });
