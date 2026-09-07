@@ -83,6 +83,12 @@ input{width:100%;padding:15px;border:1px solid #b9c8ce;border-radius:10px;margin
 .payment-note,.proof-note{background:var(--cream);border-left:5px solid var(--gold);padding:16px;border-radius:12px;margin-top:16px}
 .payment-note{color:#17282e}
 .proof-note{margin-bottom:14px}
+.status-flow{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#f8fbfb}
+.status-flow h3{margin:0 0 10px}
+.status-flow ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.status-item{padding:10px 12px;border-radius:10px;background:#eef3f4;color:#47606a;font-weight:700;border:1px solid #d9e4e7}
+.status-item.is-active{background:#fff8e8;border-color:#f1c75b;color:#6f560d}
+.status-item.is-done{background:#effaf4;border-color:#b8e1c8;color:#1e5f43}
 .whatsapp-proof-btn{display:block;width:100%;margin-top:14px;padding:17px;border-radius:11px;background:#25D366;color:#fff;text-decoration:none;text-align:center;font-size:1.02rem;font-weight:900;min-height:52px}
 .whatsapp-float{position:fixed;right:16px;bottom:18px;z-index:30;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.22);border:2px solid #fff}
 .whatsapp-float svg{width:30px;height:30px;fill:currentColor}
@@ -202,12 +208,143 @@ footer{text-align:center;padding:34px;color:#667980;font-size:13px}
 <p>SOBPORT — Representante: ________________________  Assinatura: __________________________</p>
 <p>Termo Individual de Adesão • Versão 1.5 FINAL — 04/09/2026 • Compatível com o Contrato-Mestre v2.7 FINAL • Documento para revisão jurídica antes da implantação</p></div></details></section>
 <section class="card" id="privacidade"><div class="eyebrow">LGPD</div><h2>Privacidade e proteção de dados</h2><p>Para a adesão, serão tratados somente os dados necessários ao fluxo do projeto. As finalidades são:</p><div class="grid2"><div class="box"><strong>Finalidades</strong><p>Identificação do aderente; registro do aceite; administração e execução do projeto; conciliação do pagamento; e comunicações relacionadas ao projeto.</p></div><div class="box"><strong>Proteção</strong><p>CPF/CNPJ, endereço, telefone, e-mail e demais dados pessoais não são exibidos publicamente. O acesso administrativo deve ficar restrito às pessoas autorizadas.</p></div></div><p class="small">A política operacional completa deverá manter os canais oficiais da SOBPORT devidamente preenchidos antes da publicação definitiva. Este site não inventa encarregado/DPO ou canal de privacidade inexistente.</p></section>
-<section class="card" id="adesao"><div class="eyebrow">Adesão eletrônica</div><h2>Faça sua adesão</h2><div class="form-note"><strong>Contribuição única: R$ 500,00</strong><span>Sem mensalidade obrigatória decorrente desta adesão.</span></div><form id="form"><label>Nome completo<input required id="nome" autocomplete="name"></label><label>CPF/CNPJ<input required id="cpf"></label><label>Endereço no Parque dos Pássaros<input required id="endereco"></label><label>WhatsApp<input required id="whatsapp" type="tel"></label><label>E-mail<input required id="email" type="email"></label><div class="check"><input required type="checkbox" id="termo"><label for="termo"><strong>LI, ESTOU CIENTE E ADIRO AO PROJETO</strong> — Termo Individual de Adesão v1.5.</label></div><div class="check"><input required type="checkbox" id="lgpd"><label for="lgpd">Estou ciente do tratamento dos meus dados pessoais para as finalidades informadas nesta página.</label></div><button class="btn" id="submit" type="submit">Registrar adesão e visualizar PIX</button></form><div id="erro" class="error hidden"></div><div id="confirmacao" class="success hidden"></div></section>
-<section class="card hidden" id="pagamento"><h2>Pagamento</h2><div class="payment-box"><small>CONTRIBUIÇÃO ÚNICA</small><div class="amount">R$ 500,00</div><small>PIX oficial</small><div class="pix">danieli.sobport@terra.com.br</div></div><div class="payment-note"><strong>Após realizar o pagamento via PIX, envie o comprovante pelo WhatsApp (11) 94748-6379 para confirmação do pagamento.</strong></div><a class="whatsapp-proof-btn" id="payment-whatsapp" href="https://wa.me/5511947486379?text=Ol%C3%A1%21%20Segue%20o%20comprovante%20do%20PIX%20referente%20%C3%A0%20minha%20ades%C3%A3o%20ao%20Projeto%20de%20Seguran%C3%A7a%20do%20Parque%20dos%20P%C3%A1ssaros." target="_blank" rel="noopener">ENVIAR COMPROVANTE PELO WHATSAPP</a><button class="btn" id="copy" type="button">COPIAR CHAVE PIX</button><p class="small">O pagamento permanece com status “Aguardando pagamento” até conciliação bancária. Copiar a chave ou realizar uma ação nesta página não confirma o PIX.</p></section>
+<section class="card" id="adesao"><div class="eyebrow">Adesão eletrônica</div><h2>Faça sua adesão</h2><div class="form-note"><strong>Contribuição única: R$ 500,00</strong><span>Sem mensalidade obrigatória decorrente desta adesão.</span></div><form id="form"><label>Nome completo<input required id="nome" autocomplete="name"></label><label>CPF/CNPJ<input required id="cpf"></label><label>Endereço no Parque dos Pássaros<input required id="endereco"></label><label>WhatsApp<input required id="whatsapp" type="tel"></label><label>E-mail<input required id="email" type="email"></label><div class="check"><input required type="checkbox" id="termo"><label for="termo"><strong>LI, ESTOU CIENTE E ADIRO AO PROJETO</strong> — Termo Individual de Adesão v1.5.</label></div><div class="check"><input required type="checkbox" id="lgpd"><label for="lgpd">Estou ciente do tratamento dos meus dados pessoais para as finalidades informadas nesta página.</label></div><button class="btn" id="submit" type="submit">Registrar adesão e visualizar PIX</button></form><div id="erro" class="error hidden"></div><div id="confirmacao" class="success hidden"></div><div id="status-flow" class="status-flow hidden"><h3>Status da adesão</h3><ul><li id="status-adesao" class="status-item">Adesão concluída</li><li id="status-aguardando" class="status-item">Aguardando pagamento</li><li id="status-comprovante" class="status-item">Comprovante enviado</li><li id="status-confirmado" class="status-item">Pagamento confirmado</li></ul></div></section>
+<section class="card hidden" id="pagamento"><h2>Pagamento</h2><div class="payment-box"><small>CONTRIBUIÇÃO ÚNICA</small><div class="amount">R$ 500,00</div><small>PIX oficial</small><div class="pix">danieli.sobport@terra.com.br</div></div><div class="payment-note"><strong>Após pagar o PIX, envie seu comprovante pelo WhatsApp (11) 94748-6379.</strong></div><a class="whatsapp-proof-btn" id="payment-whatsapp" href="https://wa.me/5511947486379" target="_blank" rel="noopener">ENVIAR COMPROVANTE PELO WHATSAPP</a><label for="referencia-comprovante">Identificação do comprovante (opcional)</label><input id="referencia-comprovante" placeholder="Ex.: final do TXID ou horário do PIX"><button class="btn" id="mark-proof" type="button">Já enviei comprovante no WhatsApp</button><div id="proof-error" class="error hidden"></div><div id="proof-feedback" class="success hidden"></div><button class="btn" id="copy" type="button">COPIAR CHAVE PIX</button><p class="small">Somente adesões concluídas podem registrar envio de comprovante. O envio do comprovante não confirma pagamento; a confirmação será feita pela equipe após conferência.</p></section>
 </main><a id="whatsapp-float" class="whatsapp-float" href="https://wa.me/5511947486379?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Projeto%20de%20Seguran%C3%A7a%20do%20Parque%20dos%20P%C3%A1ssaros." target="_blank" rel="noopener" aria-label="Contato por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.39c-.27-.13-1.58-.78-1.83-.87-.24-.09-.42-.13-.59.13-.17.26-.68.87-.83 1.05-.15.17-.31.2-.58.07-.27-.13-1.13-.42-2.16-1.34-.8-.71-1.34-1.58-1.49-1.85-.16-.26-.02-.41.11-.54.12-.12.27-.31.41-.46.14-.15.18-.26.27-.44.09-.17.04-.33-.02-.46-.07-.13-.59-1.42-.81-1.94-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2s.94 2.55 1.07 2.72c.13.17 1.86 2.85 4.52 3.99.63.27 1.13.43 1.52.55.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.06-.1-.24-.17-.51-.3z"></path><path d="M16 3C8.83 3 3 8.83 3 16c0 2.54.73 5.01 2.11 7.14L3.17 29l6.03-1.89A12.92 12.92 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.67c-2.11 0-4.17-.57-5.96-1.66l-.43-.25-3.58 1.12 1.16-3.49-.28-.45A10.6 10.6 0 0 1 5.33 16c0-5.88 4.79-10.67 10.67-10.67S26.67 10.12 26.67 16 21.88 26.67 16 26.67z"></path></svg></a><footer>Projeto Comunitário de Segurança — Parque dos Pássaros<br>União, transparência e responsabilidade.</footer>
 <script>
-const form=document.getElementById('form'),btn=document.getElementById('submit'),err=document.getElementById('erro'),ok=document.getElementById('confirmacao'),pay=document.getElementById('pagamento'),proofLink='https://wa.me/5511947486379?text='+encodeURIComponent('Olá! Segue o comprovante do PIX referente à minha adesão ao Projeto de Segurança do Parque dos Pássaros.');let sid=crypto.randomUUID();
-document.getElementById('payment-whatsapp').href=proofLink;
-form.addEventListener('submit',async e=>{e.preventDefault();err.classList.add('hidden');ok.classList.add('hidden');pay.classList.add('hidden');btn.disabled=true;btn.textContent='Registrando...';try{const payload={nome:nome.value.trim(),cpf:cpf.value.trim(),endereco:endereco.value.trim(),whatsapp:whatsapp.value.trim(),email:email.value.trim(),termo:termo.checked,lgpd:lgpd.checked,submissionId:sid};const r=await fetch('/api/adesao',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const j=await r.json();if(!r.ok||!j.ok)throw new Error(j.erro||'Não foi possível registrar.');ok.innerHTML='<strong>Adesão registrada com sucesso.</strong><br>Código da adesão: <strong>'+j.codigo+'</strong><br>Valor: R$ 500,00<br>Status: Aguardando pagamento<br>Versão do Termo aceita: v1.5<div class="proof-note"><strong>Após realizar o pagamento via PIX, envie o comprovante pelo WhatsApp (11) 94748-6379 para confirmação do pagamento.</strong></div><a class="whatsapp-proof-btn" href="'+proofLink+'" target="_blank" rel="noopener">ENVIAR COMPROVANTE PELO WHATSAPP</a>';ok.classList.remove('hidden');pay.classList.remove('hidden');pay.scrollIntoView({behavior:'smooth'});}catch(e){err.textContent=e.message||'Não foi possível registrar a adesão. Tente novamente.';err.classList.remove('hidden')}finally{btn.disabled=false;btn.textContent='Registrar adesão e visualizar PIX'}});
-document.getElementById('copy').onclick=()=>navigator.clipboard.writeText('danieli.sobport@terra.com.br').then(()=>document.getElementById('copy').textContent='PIX COPIADO');
+const form = document.getElementById('form');
+const btn = document.getElementById('submit');
+const err = document.getElementById('erro');
+const ok = document.getElementById('confirmacao');
+const pay = document.getElementById('pagamento');
+const statusFlow = document.getElementById('status-flow');
+const paymentWhatsapp = document.getElementById('payment-whatsapp');
+const proofReference = document.getElementById('referencia-comprovante');
+const markProofBtn = document.getElementById('mark-proof');
+const proofError = document.getElementById('proof-error');
+const proofFeedback = document.getElementById('proof-feedback');
+const copyBtn = document.getElementById('copy');
+const pixKey = 'danieli.sobport@terra.com.br';
+let sid = crypto.randomUUID ? crypto.randomUUID() : `sid-${Date.now()}`;
+let codigoAtual = '';
+
+const statusOrder = ['status-adesao', 'status-aguardando', 'status-comprovante', 'status-confirmado'];
+const stageToIndex = { adesao: 0, aguardando: 1, comprovante: 2, confirmado: 3 };
+
+function setStatus(stage) {
+  const activeIndex = stageToIndex[stage];
+  if (activeIndex === undefined) return;
+  statusOrder.forEach((id, index) => {
+    const node = document.getElementById(id);
+    node.classList.remove('is-done', 'is-active');
+    if (index < activeIndex) node.classList.add('is-done');
+    if (index === activeIndex) node.classList.add('is-active');
+  });
+}
+
+function normalizeStatus(status) {
+  const value = String(status || '').toLowerCase().trim();
+  if (value === 'comprovante enviado') return 'comprovante';
+  if (value === 'pagamento confirmado' || value === 'pago') return 'confirmado';
+  return 'aguardando';
+}
+
+function buildProofLink() {
+  const text = `Olá! Segue o comprovante do PIX da minha adesão ao Projeto de Segurança do Parque dos Pássaros. Código: ${codigoAtual}. ID de adesão: ${sid}.`;
+  paymentWhatsapp.href = 'https://wa.me/5511947486379?text=' + encodeURIComponent(text);
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  err.classList.add('hidden');
+  ok.classList.add('hidden');
+  pay.classList.add('hidden');
+  proofError.classList.add('hidden');
+  proofFeedback.classList.add('hidden');
+  btn.disabled = true;
+  btn.textContent = 'Registrando...';
+
+  try {
+    const payload = {
+      nome: nome.value.trim(),
+      cpf: cpf.value.trim(),
+      endereco: endereco.value.trim(),
+      whatsapp: whatsapp.value.trim(),
+      email: email.value.trim(),
+      termo: termo.checked,
+      lgpd: lgpd.checked,
+      submissionId: sid
+    };
+
+    const response = await fetch('/api/adesao', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.erro || 'Não foi possível registrar.');
+
+    codigoAtual = String(data.codigo || '').trim();
+    sid = String(data.submissionId || sid).trim();
+    buildProofLink();
+
+    ok.innerHTML = '<strong>Adesão concluída com sucesso.</strong><br>Código da adesão: <strong>' + codigoAtual + '</strong><br>Valor: R$ 500,00<br>Status atual: Aguardando pagamento<br>Versão do Termo aceita: v1.5';
+    ok.classList.remove('hidden');
+
+    statusFlow.classList.remove('hidden');
+    setStatus(normalizeStatus(data.status || 'Aguardando pagamento'));
+
+    pay.classList.remove('hidden');
+    pay.scrollIntoView({ behavior: 'smooth' });
+  } catch (error) {
+    err.textContent = error.message || 'Não foi possível registrar a adesão. Tente novamente.';
+    err.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Registrar adesão e visualizar PIX';
+  }
+});
+
+markProofBtn.addEventListener('click', async () => {
+  proofError.classList.add('hidden');
+  proofFeedback.classList.add('hidden');
+
+  if (!codigoAtual || !sid) {
+    proofError.textContent = 'Conclua a adesão primeiro para liberar o envio do comprovante.';
+    proofError.classList.remove('hidden');
+    return;
+  }
+
+  markProofBtn.disabled = true;
+  markProofBtn.textContent = 'Registrando envio...';
+
+  try {
+    const response = await fetch('/api/comprovante', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        codigo: codigoAtual,
+        submissionId: sid,
+        referencia: proofReference.value.trim()
+      })
+    });
+
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.erro || 'Não foi possível registrar o comprovante.');
+
+    setStatus(normalizeStatus(data.status || 'Comprovante enviado'));
+    proofFeedback.innerHTML = '<strong>Comprovante enviado.</strong><br>A equipe fará a conferência para confirmar o pagamento.<div class="proof-note"><strong>Envie seu comprovante pelo WhatsApp (11) 94748-6379.</strong></div>';
+    proofFeedback.classList.remove('hidden');
+  } catch (error) {
+    proofError.textContent = error.message || 'Não foi possível registrar o comprovante agora.';
+    proofError.classList.remove('hidden');
+  } finally {
+    markProofBtn.disabled = false;
+    markProofBtn.textContent = 'Já enviei comprovante no WhatsApp';
+  }
+});
+
+copyBtn.onclick = () => navigator.clipboard.writeText(pixKey).then(() => {
+  copyBtn.textContent = 'PIX COPIADO';
+});
 </script></body></html>
