@@ -27,67 +27,72 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans
 a{color:inherit}
 .wrap{max-width:980px;margin:auto;padding:0 20px}
 nav{position:sticky;top:0;z-index:20;background:rgba(7,38,51,.96);backdrop-filter:blur(10px);color:white;border-bottom:1px solid rgba(255,255,255,.08)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
 .brand{font-weight:900}
+.nav-actions{display:flex;align-items:center;gap:14px}
 .navlinks{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
 .navlinks a{text-decoration:none;opacity:.95;padding:6px 4px}
-header{background:linear-gradient(145deg,var(--navy2),var(--navy));color:white;padding:40px 0 28px}
-.hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.95fr);gap:22px;align-items:start}
+header{background:linear-gradient(145deg,var(--navy2),var(--navy));color:white;padding:34px 0 24px}
+.nav-cta{display:none;text-decoration:none;background:var(--gold);color:#17272d;padding:10px 16px;border-radius:999px;font-size:.84rem;font-weight:900;letter-spacing:.05em}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:20px;align-items:center}
 .badge{display:inline-block;background:var(--gold);color:#1c2a2f;padding:8px 13px;border-radius:999px;font-size:13px;font-weight:900}
-h1{font-size:42px;line-height:1.08;margin:16px 0 12px;max-width:12ch}
-.lead{font-size:1.08rem;color:#e7eff1;max-width:640px;margin:0}
-.hero-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 0}
-.hero-point{background:rgba(255,255,255,.08);padding:15px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
-.hero-point strong{display:block;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.hero-point span{display:block;font-size:.97rem;line-height:1.45;color:#eff6f7}
-.heroactions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 14px}
+h1{font-size:44px;line-height:1.04;margin:14px 0 10px;max-width:11ch}
+.lead{font-size:1.05rem;color:#e7eff1;max-width:32ch;margin:0}
+.hero-price{display:inline-flex;flex-direction:column;gap:4px;margin-top:20px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);box-shadow:0 12px 28px rgba(0,0,0,.14)}
+.hero-price span{font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.hero-price strong{font-size:2.3rem;line-height:1;color:white}
+.hero-price small{color:#dbe8ec;font-size:.94rem}
+.heroactions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 0}
 .cta{display:inline-block;text-decoration:none;background:var(--gold);color:#17272d;padding:16px 22px;border-radius:12px;font-weight:900;min-height:48px}
 .cta-main{box-shadow:0 10px 24px rgba(0,0,0,.18)}
 .ghost{display:inline-block;text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:16px 22px;border-radius:12px;font-weight:800;min-height:48px}
-.support-note{margin:0;color:#dbe8ec;font-size:.95rem;line-height:1.5}
-.hero-panel{background:white;color:var(--ink);padding:22px;border-radius:20px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.hero-subactions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.hero-subactions .ghost{padding:14px 18px;min-height:46px}
+.support-note{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 12px;border-radius:999px;background:#0e4658;border:1px solid rgba(255,255,255,.18);color:#edf5f6;font-size:.84rem;line-height:1.4}
+.support-note strong{color:#fff;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.hero-panel{background:white;color:var(--ink);padding:20px;border-radius:20px;box-shadow:0 18px 40px rgba(0,0,0,.16)}
 .panel-eyebrow{display:inline-block;font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
-.hero-value{display:block;font-size:46px;line-height:1;margin:10px 0 8px;color:#102b35}
-.hero-panel p{margin:0;color:#38505a}
-.hero-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.hero-panel-title{font-size:1.45rem;line-height:1.15;margin:10px 0 8px;color:#102b35}
+.hero-panel p{margin:0;color:#38505a;line-height:1.55}
+.hero-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
 .hero-list li{position:relative;padding-left:18px;font-size:.97rem;color:#213841}
 .hero-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.hero-meta{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:.94rem;color:#4a5f67}
-.card{background:white;margin:14px auto;padding:24px;border-radius:18px;box-shadow:0 8px 30px rgba(12,52,68,.08)}
-h2{font-size:2rem;line-height:1.2;margin:0 0 14px}
-h3{margin:20px 0 10px}
+.hero-meta{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:.92rem;color:#4a5f67}
+.card{background:white;margin:12px auto;padding:22px;border-radius:18px;box-shadow:0 8px 30px rgba(12,52,68,.08)}
+h2{font-size:1.9rem;line-height:1.16;margin:0 0 12px}
+h3{margin:18px 0 10px}
 .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:900}
-.section-intro{max-width:760px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.box{border:1px solid var(--line);border-radius:14px;padding:18px;background:#f8fbfb}
+.section-intro{max-width:760px;margin:0 0 14px;line-height:1.58}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px;background:#f8fbfb}
 .highlight{background:var(--cream);border-left:5px solid var(--gold);padding:18px;border-radius:12px;color:var(--ink)}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.step{background:#f5f9fa;border:1px solid var(--line);border-radius:12px;padding:15px;font-size:1rem}
+.step{background:#f5f9fa;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:.98rem;line-height:1.55}
 .step b{display:block;color:var(--green);margin-bottom:6px}
 .video{background:linear-gradient(135deg,#0a2f3c,#174d5d);color:white;border-radius:18px;min-height:280px;display:grid;place-items:center;text-align:center;padding:32px}
 .play{width:64px;height:64px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#16282e;font-size:28px;margin:auto auto 14px}
 .small{font-size:.95rem;color:var(--muted)}
 .docs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.doc{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fbfdfd}
+.doc{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfdfd}
 .doc a{display:inline-block;margin-top:9px;font-weight:850;color:var(--green);padding:6px 0}
-.inline-links{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
-.inline-links a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 14px;border-radius:999px;background:#f4f8f9;border:1px solid var(--line);font-size:.92rem;font-weight:800;text-decoration:none}
+.inline-links{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px}
+.inline-links a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 14px;border-radius:999px;background:#f4f8f9;border:1px solid var(--line);font-size:.9rem;font-weight:800;text-decoration:none}
 .support-card{margin-top:16px;background:#f7fafb;border:1px solid var(--line);border-radius:14px;padding:16px}
 details{border-top:1px solid var(--line);padding:16px 0}
-summary{cursor:pointer;font-weight:850;font-size:1.03rem;line-height:1.5}
+summary{cursor:pointer;font-weight:850;font-size:1rem;line-height:1.5}
 .termtext{max-height:520px;overflow:auto;background:#f8fbfb;border:1px solid var(--line);border-radius:12px;padding:18px;font-size:14px;line-height:1.6}
 .termtext p{margin:0 0 10px}
 .form-note{background:#f8fbfb;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:6px 0 14px}
 .form-note strong{display:block;font-size:1.12rem;margin-bottom:4px;color:#0f513a}
-label{display:block;font-weight:750;margin-top:16px;line-height:1.45}
-input{width:100%;padding:15px;border:1px solid #b9c8ce;border-radius:10px;margin-top:8px;font-size:16px;min-height:50px}
-.check{display:flex;gap:12px;margin-top:20px;align-items:flex-start}
+label{display:block;font-weight:750;margin-top:14px;line-height:1.45}
+input{width:100%;padding:14px;border:1px solid #b9c8ce;border-radius:10px;margin-top:8px;font-size:16px;min-height:48px}
+.check{display:flex;gap:12px;margin-top:18px;align-items:flex-start}
 .check input{width:22px;height:22px;min-height:22px;margin-top:2px;flex:0 0 auto}
 .check label{margin:0;font-weight:500;font-size:1rem}
-.btn{display:block;width:100%;padding:17px;border:0;border-radius:11px;background:var(--navy);color:white;font-size:1.06rem;font-weight:900;margin-top:22px;min-height:52px}
+.btn{display:block;width:100%;padding:16px;border:0;border-radius:11px;background:var(--navy);color:white;font-size:1rem;font-weight:900;margin-top:18px;min-height:50px}
 .btn:disabled{opacity:.55}
 .hidden{display:none}
-.success{background:#effaf4;border:1px solid #b8e1c8;padding:18px;border-radius:14px;margin-top:18px}
+.success{background:#effaf4;border:1px solid #b8e1c8;padding:18px;border-radius:14px;margin-top:18px;line-height:1.55}
 .error{background:#fff1f1;border:1px solid #e7b9b9;padding:15px;border-radius:12px;margin-top:16px;color:#7b2424}
 .payment-box{background:linear-gradient(135deg,var(--green2),var(--green));color:white;padding:22px;border-radius:16px}
 .amount{font-size:42px;font-weight:900}
@@ -95,6 +100,9 @@ input{width:100%;padding:15px;border:1px solid #b9c8ce;border-radius:10px;margin
 .payment-note,.proof-note{background:var(--cream);border-left:5px solid var(--gold);padding:16px;border-radius:12px;margin-top:16px}
 .payment-note{color:#17282e}
 .proof-note{margin-bottom:14px}
+.payment-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.payment-step{background:#f5f9fa;border:1px solid var(--line);border-radius:14px;padding:14px;line-height:1.5}
+.payment-step strong{display:block;margin-bottom:6px;color:var(--green);font-size:.8rem;letter-spacing:.05em;text-transform:uppercase}
 .status-flow{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#f8fbfb}
 .status-flow h3{margin:0 0 10px}
 .status-flow ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -108,34 +116,47 @@ input{width:100%;padding:15px;border:1px solid #b9c8ce;border-radius:10px;margin
 footer{text-align:center;padding:34px;color:#667980;font-size:13px}
 [id]{scroll-margin-top:88px}
 @media(max-width:760px){
- body{font-size:16px;line-height:1.6}
+body{font-size:16px;line-height:1.58}
  .wrap{padding:0 16px}
- header{padding:28px 0 20px}
- .hero,.hero-summary,.grid2,.timeline,.docs{grid-template-columns:1fr}
- h1{font-size:2rem;line-height:1.12;max-width:none}
- h2{font-size:1.65rem}
+ header{padding:24px 0 18px}
+ .hero,.grid2,.timeline,.docs,.payment-steps{grid-template-columns:1fr}
+ h1{font-size:32px;line-height:1.05;max-width:none}
+ h2{font-size:1.6rem}
  .lead{font-size:1rem}
- .hero-point{padding:14px}
- .heroactions{margin:20px 0 12px}
- .hero-panel{padding:18px}
- .hero-value{font-size:40px}
+ .hero-price{margin-top:18px;padding:14px 16px}
+ .hero-price strong{font-size:2rem}
+ .heroactions{margin:18px 0 0}
+ .hero-subactions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+ .hero-subactions .ghost{width:100%;padding:13px 12px;font-size:.86rem}
+ .hero-panel{padding:16px}
+ .hero-panel-title{font-size:1.28rem}
  .navlinks{display:none}
- .card{padding:20px;margin:12px auto}
- .step,.doc,.box{padding:16px}
+ .nav-cta{display:inline-flex}
+ .card{padding:18px;margin:10px auto}
+ .step,.doc,.box,.payment-step{padding:14px}
  input{font-size:17px;min-height:52px}
- .btn,.cta,.ghost{width:100%;text-align:center;min-height:54px;padding:16px 18px}
- summary{font-size:1.08rem}
+ .btn,.cta,.ghost{width:100%;text-align:center;min-height:52px;padding:15px 16px}
+ .cta-main{width:100%}
+ summary{font-size:1rem}
  .check{gap:10px}
  .termtext{max-height:360px}
  .inline-links a{width:100%}
- .whatsapp-float{right:12px;bottom:14px;width:58px;height:58px}
+ footer{padding:26px 16px 86px}
+ .whatsapp-float{right:12px;bottom:14px;width:56px;height:56px}
+}
+@media(max-width:430px){
+ .wrap{padding:0 15px}
+ h1{font-size:30px}
+ .hero-subactions .ghost{font-size:.82rem}
+ .support-note{font-size:.79rem;padding:7px 10px}
+ .card{padding:17px}
 }
 </style></head><body>
-<nav><div class="wrap"><div class="brand">PARQUE DOS PÁSSAROS</div><div class="navlinks"><a href="#projeto">Projeto</a><a href="#video">Vídeo</a><a href="#faq">FAQ</a><a href="#documentos">Documentos</a><a href="#privacidade">LGPD</a><a href="#adesao">Adesão</a></div></div></nav>
-<header><div class="wrap hero"><div><span class="badge">PROJETO COMUNITÁRIO DE SEGURANÇA</span><h1>Mais segurança para o nosso bairro começa com a participação de cada morador.</h1><p class="lead">Projeto comunitário de monitoramento e segurança para o Parque dos Pássaros, com adesão eletrônica individual e transparente.</p><div class="hero-summary"><div class="hero-point"><strong>O que é</strong><span>Um projeto comunitário para implantar monitoramento e reforçar a segurança do bairro.</span></div><div class="hero-point"><strong>Quanto custa</strong><span>Contribuição única de R$ 500,00, sem mensalidade obrigatória decorrente desta adesão.</span></div><div class="hero-point"><strong>Objetivo agora</strong><span>Registrar sua adesão para liberar o PIX oficial e avançar com a mobilização.</span></div></div><div class="heroactions"><a class="cta cta-main" href="#adesao">QUERO ADERIR</a><a class="ghost" href="#projeto">CONHECER O PROJETO</a><a class="ghost" href="#documentos">VER DOCUMENTOS</a></div><p class="support-note"><strong>Apoio institucional SAPP.</strong> A SAPP apoia a mobilização e a divulgação do projeto, sem atuar como contratante, responsável financeira ou executora da operação.</p></div><aside class="hero-panel"><span class="panel-eyebrow">Contribuição única</span><strong class="hero-value">R$ 500,00</strong><p>Sem mensalidade obrigatória decorrente desta adesão.</p><ul class="hero-list"><li>Documentos disponíveis antes do aceite eletrônico.</li><li>O PIX só aparece depois do registro da adesão.</li><li>O comprovante segue por WhatsApp e a confirmação depende de conferência.</li></ul><div class="hero-meta"><strong>Meta de mobilização:</strong> 600 adesões, sem número mínimo contratual obrigatório para existência de cada adesão individual.</div></aside></div></header>
+<nav><div class="wrap"><div class="brand">PARQUE DOS PÁSSAROS</div><div class="nav-actions"><div class="navlinks"><a href="#projeto">Projeto</a><a href="#video">Vídeo</a><a href="#faq">FAQ</a><a href="#documentos">Documentos</a><a href="#privacidade">LGPD</a><a href="#adesao">Adesão</a></div><a class="nav-cta" href="#adesao">ADERIR</a></div></div></nav>
+<header><div class="wrap hero"><div><span class="badge">PROJETO DE SEGURANÇA — PARQUE DOS PÁSSAROS</span><h1>Mais segurança para o nosso bairro começa com a participação de cada morador.</h1><p class="lead">Projeto comunitário de monitoramento e segurança.</p><div class="hero-price"><span>Contribuição única</span><strong>R$ 500</strong><small>Sem mensalidade obrigatória decorrente desta adesão.</small></div><div class="heroactions"><a class="cta cta-main" href="#adesao">QUERO ADERIR</a></div><div class="hero-subactions"><a class="ghost" href="#projeto">CONHECER O PROJETO</a><a class="ghost" href="#documentos">VER DOCUMENTOS</a></div><p class="support-note"><strong>SAPP</strong><span>Apoio institucional na mobilização e divulgação do projeto.</span></p></div><aside class="hero-panel"><span class="panel-eyebrow">Antes do pagamento</span><div class="hero-panel-title">Seu aceite libera o PIX oficial do projeto.</div><p>O morador registra a adesão, recebe o código individual e só então acessa a etapa de pagamento.</p><ul class="hero-list"><li>Documentos disponíveis antes do aceite eletrônico.</li><li>O comprovante segue por WhatsApp oficial.</li><li>A confirmação depende da conferência da equipe.</li></ul><div class="hero-meta"><strong>Meta de mobilização:</strong> 600 adesões orientam o planejamento, sem criar número mínimo contratual obrigatório para a existência da adesão individual.</div></aside></div></header>
 <main class="wrap">
 <section class="card" id="adesao"><div class="eyebrow">Adesão eletrônica</div><h2>Faça sua adesão</h2><p class="section-intro">Preencha seus dados, leia os documentos e registre o aceite para liberar o PIX oficial do projeto.</p><div class="form-note"><strong>Contribuição única: R$ 500,00</strong><span>Sem mensalidade obrigatória decorrente desta adesão.</span></div><div class="inline-links"><a href="#termo-integral">LER TERMO NO SITE</a><a href="/contrato-mestre.pdf" target="_blank" rel="noopener">VER CONTRATO-MESTRE</a><a href="/Politica_Privacidade_Parque_dos_Passaros_v1_0.docx" target="_blank" rel="noopener">ABRIR POLÍTICA LGPD</a></div><div class="highlight"><strong>Trava do fluxo:</strong> o PIX só é liberado depois que o morador conclui o formulário e aceita o Termo de Adesão. Antes disso, a etapa de pagamento permanece bloqueada.</div><form id="form"><label>Nome completo<input required id="nome" autocomplete="name" placeholder="Seu nome completo"></label><label>CPF/CNPJ<input required id="cpf" inputmode="numeric" placeholder="Digite seu CPF ou CNPJ"></label><label>Endereço no Parque dos Pássaros<input required id="endereco" autocomplete="street-address" placeholder="Rua, número e complemento"></label><label>WhatsApp<input required id="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999"></label><label>E-mail<input required id="email" type="email" autocomplete="email" placeholder="voce@exemplo.com"></label><div class="check"><input required type="checkbox" id="termo"><label for="termo"><strong>LI, ESTOU CIENTE E ADIRO AO PROJETO</strong> — Termo Individual de Adesão v1.5.</label></div><div class="check"><input required type="checkbox" id="lgpd"><label for="lgpd">Estou ciente do tratamento dos meus dados pessoais para as finalidades informadas nesta página.</label></div><button class="btn" id="submit" type="submit" disabled>Registrar adesão e liberar PIX</button></form><div id="erro" class="error hidden"></div><div id="confirmacao" class="success hidden"></div><div id="status-flow" class="status-flow hidden"><h3>Status da adesão</h3><ul><li id="status-adesao" class="status-item">Adesão concluída</li><li id="status-aguardando" class="status-item">Aguardando pagamento/confirmação</li><li id="status-comprovante" class="status-item">Comprovante enviado</li><li id="status-confirmado" class="status-item">Pagamento confirmado</li></ul></div></section>
-<section class="card" id="projeto"><div class="eyebrow">Projeto</div><h2>O que você precisa saber antes de aderir</h2><p class="section-intro">A página foi reorganizada para deixar o essencial primeiro: entender o projeto, saber o valor da contribuição e aderir com acesso transparente aos documentos.</p><div class="grid2"><div class="box"><h3>Projeto comunitário</h3><p>O objetivo é implantar uma solução de monitoramento e segurança adequada ao Parque dos Pássaros, construída com participação dos moradores.</p></div><div class="box"><h3>Escolha da operadora</h3><p>Foram analisadas diferentes propostas e a <strong>SOBPORT foi escolhida por unanimidade entre os presentes</strong> na reunião de avaliação.</p></div><div class="box"><h3>Fluxo protegido</h3><p>A adesão registra dados, aceite eletrônico, código único e status inicial antes da liberação do PIX, preservando a sequência adesão → pagamento → comprovante.</p></div><div class="box"><h3>Papel da SAPP</h3><p>A SAPP permanece apenas no apoio institucional e na divulgação. A adesão, a contratação, a operação e a execução seguem diretas entre cada aderente e a SOBPORT.</p></div></div><div class="highlight"><strong>Meta de mobilização:</strong> 600 adesões orientam o planejamento, mas não são condição mínima obrigatória para a existência da adesão individual.</div></section>
+<section class="card" id="projeto"><div class="eyebrow">Projeto</div><h2>O que você precisa saber antes de aderir</h2><p class="section-intro">A página prioriza o essencial na primeira dobra e deixa os detalhes contratuais e operacionais organizados logo abaixo, com acesso transparente aos documentos.</p><div class="grid2"><div class="box"><h3>Projeto comunitário</h3><p>O objetivo é implantar uma solução de monitoramento e segurança adequada ao Parque dos Pássaros, construída com participação dos moradores.</p></div><div class="box"><h3>Escolha da operadora</h3><p>Foram analisadas diferentes propostas e a <strong>SOBPORT foi escolhida por unanimidade entre os presentes</strong> na reunião de avaliação.</p></div><div class="box"><h3>Fluxo protegido</h3><p>A adesão registra dados, aceite eletrônico, código único e status inicial antes da liberação do PIX, preservando a sequência adesão → pagamento → comprovante.</p></div><div class="box"><h3>Transparência documental</h3><p>Termo, Contrato-Mestre, política de privacidade e apresentação do projeto ficam acessíveis antes do aceite eletrônico.</p></div></div><div class="highlight"><strong>Meta de mobilização:</strong> 600 adesões orientam o planejamento, mas não são condição mínima obrigatória para a existência da adesão individual.</div></section>
 <section class="card" id="documentos"><div class="eyebrow">Transparência</div><h2>Central de Documentos</h2><p class="section-intro">Os documentos permanecem acessíveis antes do aceite eletrônico, mas agora aparecem depois da ação principal para não competir com a adesão.</p><div class="docs"><div class="doc"><strong>Apresentação do Projeto — SOBPORT</strong><p class="small">Apresentação completa da solução proposta para o Parque dos Pássaros, incluindo estrutura, equipamentos, cobertura prevista e esclarecimentos.</p><a href="/Apresentacao-Sob-Port.pdf" target="_blank" rel="noopener">VER APRESENTAÇÃO</a></div><div class="doc"><strong>Termo Individual de Adesão v1.5</strong><p class="small">Contribuição, meta, prazos, responsabilidades, aceite eletrônico e regras essenciais.</p><a href="#termo-integral">LER TERMO INTEGRAL</a></div><div class="doc"><strong>Política de Privacidade e LGPD</strong><p class="small">Resumo de tratamento de dados usado no fluxo de adesão. Sem exposição pública de CPF, endereço, telefone ou e-mail.</p><a href="/Politica_Privacidade_Parque_dos_Passaros_v1_0.docx" target="_blank" rel="noopener">LER POLÍTICA DE PRIVACIDADE E LGPD</a></div><div class="doc"><strong>Contrato-Mestre v2.7 FINAL</strong><p class="small">Versão vigente referenciada do Contrato-Mestre para consulta pública.</p><a href="/contrato-mestre.pdf" target="_blank" rel="noopener">VER CONTRATO-MESTRE</a></div></div><div class="support-card"><strong>Apoio institucional SAPP.</strong> A SAPP permanece visível como apoiadora institucional da mobilização e da divulgação, sem substituir a contratação direta com a SOBPORT.</div><h3>Termo completo no próprio site</h3><details id="termo-integral"><summary>Ler Termo Individual de Adesão v1.5</summary><div class="termtext"><p>PROJETO COMUNITÁRIO DE SEGURANÇA | PARQUE DOS PÁSSAROS</p>
 <p>TERMO INDIVIDUAL DE ADESÃO</p>
 <p>Adesão voluntária, individual e eletrônica — sem entidade coletiva intermediária</p>
@@ -212,7 +233,7 @@ footer{text-align:center;padding:34px;color:#667980;font-size:13px}
 <p>SOBPORT — Representante: ________________________  Assinatura: __________________________</p>
 <p>Termo Individual de Adesão • Versão 1.5 FINAL — 04/09/2026 • Compatível com o Contrato-Mestre v2.7 FINAL • Documento para revisão jurídica antes da implantação</p></div></details></section>
 <section class="card"><div class="eyebrow">Passo a passo</div><h2>Como funciona a adesão</h2><div class="timeline"><div class="step"><b>1. INFORME SEUS DADOS</b>Nome, CPF/CNPJ, endereço no Parque, WhatsApp e e-mail.</div><div class="step"><b>2. LEIA OS DOCUMENTOS</b>Termo de Adesão e informações de privacidade ficam acessíveis antes do aceite.</div><div class="step"><b>3. REGISTRE O ACEITE</b>O checkbox não vem marcado. O morador confirma expressamente: “LI, ESTOU CIENTE E ADIRO AO PROJETO”. Sem esse aceite, o pagamento não é liberado.</div><div class="step"><b>4. PAGUE POR PIX</b>A chave PIX só aparece depois que a adesão é registrada no sistema. Após realizar o pagamento via PIX, envie o comprovante pelo WhatsApp (11) 94748-6379. O pagamento só será confirmado após esse envio e a conferência da equipe.</div></div></section>
-<section class="card" id="video"><div class="eyebrow">Campanha</div><h2>Vídeo para os moradores</h2><div class="video" style="padding:0;overflow:hidden;background:#000"><video controls playsinline preload="none" style="width:100%;height:auto;display:block;max-height:70vh;background:#000" poster="/og-parque.jpg"><source src="/video.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video></div></section>
+<section class="card" id="video"><div class="eyebrow">Campanha</div><h2>Vídeo para os moradores</h2><div class="video" style="padding:0;overflow:hidden;background:#000"><video controls playsinline preload="metadata" style="width:100%;height:auto;display:block;max-height:70vh;background:#000" poster="/og-parque.jpg"><source src="/video.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video></div></section>
 <section class="card" id="faq"><div class="eyebrow">Dúvidas frequentes</div><h2>FAQ dos moradores</h2>
 <details open><summary>Quanto custa para aderir?</summary><p>A contribuição desta adesão é única, no valor de <strong>R$ 500,00</strong>.</p></details>
 <details><summary>Existe mensalidade obrigatória?</summary><p>Não. Esta adesão não cria mensalidade obrigatória. Eventual contribuição futura depende de novo opt-in individual e expresso.</p></details>
@@ -228,7 +249,7 @@ footer{text-align:center;padding:34px;color:#667980;font-size:13px}
 <details><summary>Depois do PIX, o que eu preciso fazer?</summary><p>Envie o comprovante pelo WhatsApp (11) 94748-6379. O pagamento só será confirmado após o envio do comprovante e a conferência da equipe.</p></details>
 </section>
 <section class="card" id="privacidade"><div class="eyebrow">LGPD</div><h2>Privacidade e proteção de dados</h2><p>Para a adesão, serão tratados somente os dados necessários ao fluxo do projeto. As finalidades são:</p><div class="grid2"><div class="box"><strong>Finalidades</strong><p>Identificação do aderente; registro do aceite; administração e execução do projeto; conciliação do pagamento; e comunicações relacionadas ao projeto.</p></div><div class="box"><strong>Proteção</strong><p>CPF/CNPJ, endereço, telefone, e-mail e demais dados pessoais não são exibidos publicamente. O acesso administrativo deve ficar restrito às pessoas autorizadas.</p></div></div><p><a class="cta" href="/Politica_Privacidade_Parque_dos_Passaros_v1_0.docx" target="_blank" rel="noopener">ABRIR POLÍTICA DE PRIVACIDADE E LGPD</a></p><p class="small">A política operacional completa deverá manter os canais oficiais da SOBPORT devidamente preenchidos antes da publicação definitiva. Este site não inventa encarregado/DPO ou canal de privacidade inexistente.</p></section>
-<section class="card hidden" id="pagamento"><h2>Pagamento</h2><div class="payment-box"><small>CONTRIBUIÇÃO ÚNICA</small><div class="amount">R$ 500,00</div><small>PIX oficial</small><div class="pix">danieli.sobport@terra.com.br</div></div><div class="payment-note"><strong>Após pagar o PIX, envie seu comprovante pelo WhatsApp (11) 94748-6379.</strong><br>O pagamento só será confirmado depois do envio do comprovante e da conferência da equipe.</div><a class="whatsapp-proof-btn" id="payment-whatsapp" href="https://wa.me/5511947486379" target="_blank" rel="noopener">ENVIAR COMPROVANTE PELO WHATSAPP</a><label for="referencia-comprovante">Identificação do comprovante (opcional)</label><input id="referencia-comprovante" placeholder="Ex.: final do TXID ou horário do PIX"><button class="btn" id="mark-proof" type="button">Já enviei comprovante no WhatsApp</button><div id="proof-error" class="error hidden"></div><div id="proof-feedback" class="success hidden"></div><button class="btn" id="copy" type="button">COPIAR CHAVE PIX</button><p class="small">Somente adesões concluídas podem registrar envio de comprovante. O envio do comprovante não confirma pagamento; a confirmação será feita pela equipe após conferência.</p></section>
+<section class="card hidden" id="pagamento"><div class="eyebrow">Pagamento</div><h2>Pagamento liberado</h2><p class="section-intro">Siga esta sequência para concluir sua adesão com segurança.</p><div class="payment-box"><small>CONTRIBUIÇÃO ÚNICA</small><div class="amount">R$ 500,00</div><small>PIX oficial</small><div class="pix">danieli.sobport@terra.com.br</div></div><button class="btn" id="copy" type="button">COPIAR CHAVE PIX</button><div class="payment-steps"><div class="payment-step"><strong>1 — Faça o PIX</strong>Pague R$ 500,00 usando a chave oficial liberada após o registro da adesão.</div><div class="payment-step"><strong>2 — Envie o comprovante</strong>Use o WhatsApp oficial (11) 94748-6379 para encaminhar o comprovante.</div><div class="payment-step"><strong>3 — Confirme o envio</strong>Clique em “JÁ ENVIEI MEU COMPROVANTE” para registrar essa etapa.</div><div class="payment-step"><strong>4 — Aguarde a conferência</strong>O pagamento só será confirmado depois da análise da equipe.</div></div><div class="payment-note"><strong>O PIX continua bloqueado até a adesão ser registrada com sucesso.</strong><br>Copiar a chave, pagar ou enviar o comprovante não confirma automaticamente o pagamento.</div><a class="whatsapp-proof-btn" id="payment-whatsapp" href="https://wa.me/5511947486379" target="_blank" rel="noopener">ENVIAR COMPROVANTE PELO WHATSAPP</a><label for="referencia-comprovante">Identificação do comprovante (opcional)</label><input id="referencia-comprovante" placeholder="Ex.: final do TXID ou horário do PIX"><button class="btn" id="mark-proof" type="button">JÁ ENVIEI MEU COMPROVANTE</button><div id="proof-error" class="error hidden"></div><div id="proof-feedback" class="success hidden"></div><p class="small">Somente adesões concluídas podem registrar envio de comprovante. O envio do comprovante não confirma pagamento; a confirmação será feita pela equipe após conferência.</p></section>
 </main><a id="whatsapp-float" class="whatsapp-float" href="https://wa.me/5511947486379?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Projeto%20de%20Seguran%C3%A7a%20do%20Parque%20dos%20P%C3%A1ssaros." target="_blank" rel="noopener" aria-label="Contato por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.39c-.27-.13-1.58-.78-1.83-.87-.24-.09-.42-.13-.59.13-.17.26-.68.87-.83 1.05-.15.17-.31.2-.58.07-.27-.13-1.13-.42-2.16-1.34-.8-.71-1.34-1.58-1.49-1.85-.16-.26-.02-.41.11-.54.12-.12.27-.31.41-.46.14-.15.18-.26.27-.44.09-.17.04-.33-.02-.46-.07-.13-.59-1.42-.81-1.94-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2s.94 2.55 1.07 2.72c.13.17 1.86 2.85 4.52 3.99.63.27 1.13.43 1.52.55.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.06-.1-.24-.17-.51-.3z"></path><path d="M16 3C8.83 3 3 8.83 3 16c0 2.54.73 5.01 2.11 7.14L3.17 29l6.03-1.89A12.92 12.92 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.67c-2.11 0-4.17-.57-5.96-1.66l-.43-.25-3.58 1.12 1.16-3.49-.28-.45A10.6 10.6 0 0 1 5.33 16c0-5.88 4.79-10.67 10.67-10.67S26.67 10.12 26.67 16 21.88 26.67 16 26.67z"></path></svg></a><footer>Projeto Comunitário de Segurança — Parque dos Pássaros<br>União, transparência e responsabilidade.</footer>
 <script>
 const form = document.getElementById('form');
@@ -384,7 +405,7 @@ form.addEventListener('submit', async (e) => {
     buildProofLink();
     const statusAtual = String(data.status || 'Aguardando pagamento/confirmação').trim();
 
-    ok.innerHTML = '<strong>Adesão concluída com sucesso.</strong><br>Código da adesão: <strong>' + codigoAtual + '</strong><br>Valor: R$ 500,00<br>Status atual: ' + statusAtual + '<br>Versão do Termo aceita: v1.5<div class="proof-note"><strong>Próximo passo obrigatório:</strong> após pagar o PIX, envie o comprovante pelo WhatsApp (11) 94748-6379. O pagamento só será confirmado após esse envio e a conferência da equipe.</div>';
+    ok.innerHTML = '<strong>Adesão concluída com sucesso.</strong><br>Código da adesão: <strong>' + codigoAtual + '</strong><br>Valor: R$ 500,00<br>Status atual: ' + statusAtual + '<br>Versão do Termo aceita: v1.5<div class="proof-note"><strong>Próximo passo obrigatório:</strong> faça o PIX de R$ 500, envie o comprovante pelo WhatsApp (11) 94748-6379, clique em “JÁ ENVIEI MEU COMPROVANTE” e aguarde a conferência da equipe.</div>';
     ok.classList.remove('hidden');
 
     statusFlow.classList.remove('hidden');
@@ -437,7 +458,7 @@ markProofBtn.addEventListener('click', async () => {
     proofError.classList.remove('hidden');
   } finally {
     markProofBtn.disabled = false;
-    markProofBtn.textContent = 'Já enviei comprovante no WhatsApp';
+    markProofBtn.textContent = 'JÁ ENVIEI MEU COMPROVANTE';
   }
 });
 
