@@ -125,18 +125,18 @@ module.exports = async (req, res) => {
     }
 
     const currentStatus = String(record.fields?.[PAYMENT_STATUS_FIELD] || '');
-    if (currentStatus.toLowerCase() === 'pago') {
+    if (['pago', 'pagamento confirmado'].includes(currentStatus.toLowerCase())) {
       return res.status(200).json({
         ok: true,
         atualizado: false,
-        motivo: 'Adesão já marcada como paga',
+        motivo: 'Adesão já marcada com pagamento confirmado',
         codigo: record.fields?.['Código'] || null
       });
     }
 
     const paymentDate = payload.paidAt || payload.receivedAt || payload.confirmedAt || new Date().toISOString();
     const fields = {
-      [PAYMENT_STATUS_FIELD]: 'Pago',
+      [PAYMENT_STATUS_FIELD]: 'Pagamento confirmado',
       [PAYMENT_TRANSACTION_FIELD]: transactionId,
       [PAYMENT_DATE_FIELD]: paymentDate
     };
