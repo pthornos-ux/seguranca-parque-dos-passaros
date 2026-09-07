@@ -3,7 +3,7 @@ API
 ## Endpoints
 
 - `POST /api/adesao`  
-  Registra adesão no Airtable com geração de código único e status inicial `Aguardando pagamento`.
+  Registra adesão no Airtable com geração de código único e status inicial `Aguardando pagamento/confirmação`.
 
 - `POST /api/comprovante`  
   Registra o envio de comprovante somente para adesão válida (`codigo` + `submissionId`) e atualiza o status para `Comprovante enviado`.

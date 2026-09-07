@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
         return res.status(200).json({
           ok: true,
           codigo: fields['Código'] || 'Registrado',
-          status: fields[PAYMENT_STATUS_FIELD] || 'Aguardando pagamento',
+          status: fields[PAYMENT_STATUS_FIELD] || 'Aguardando pagamento/confirmação',
           submissionId,
           duplicado: true
         });
@@ -77,7 +77,7 @@ module.exports = async (req, res) => {
       'E-mail': String(email).trim(),
       'Aceite Termo v1.5': true,
       'Ciência LGPD': true,
-      [PAYMENT_STATUS_FIELD]: 'Aguardando pagamento',
+      [PAYMENT_STATUS_FIELD]: 'Aguardando pagamento/confirmação',
       Valor: 500,
       'Submission ID': String(submissionId),
       'Versão do Termo': 'v1.5'
@@ -94,7 +94,7 @@ module.exports = async (req, res) => {
       throw new Error('airtable-write');
     }
 
-    return res.status(200).json({ ok: true, codigo, status: 'Aguardando pagamento', submissionId });
+    return res.status(200).json({ ok: true, codigo, status: 'Aguardando pagamento/confirmação', submissionId });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ ok: false, erro: 'Não foi possível registrar a adesão. Tente novamente.' });
